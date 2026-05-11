@@ -1,0 +1,120 @@
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 140px;
+}
+
+.hero-simple-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text-block-simple {
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+  animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.badge-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Typography ── */
+.hero-title-large {
+  font-size: clamp(3.5rem, 10vw, 7.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--text-main);
+  margin-bottom: 2.5rem;
+}
+
+.accent-text {
+  color: var(--text-muted);
+  font-weight: 300;
+  font-style: italic;
+}
+
+.hero-bio-simple {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 4rem;
+}
+
+/* ── Actions ── */
+.hero-actions-simple {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn-hero-primary {
+  background: var(--accent);
+  color: var(--bg-main);
+  padding: 1.2rem 3rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.btn-hero-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn-hero-secondary {
+  background: transparent;
+  color: var(--text-main);
+  padding: 1.2rem 3rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+}
+
+.btn-hero-secondary:hover {
+  background: var(--bg-subtle);
+}
+
+@media (max-width: 768px) {
+  .hero-title-large {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+  .hero-actions-simple {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-hero-primary, .btn-hero-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}

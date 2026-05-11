@@ -1,0 +1,118 @@
+.projects-header-block {
+  position: sticky;
+  top: 150px;
+}
+
+.project-list-premium {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.project-row-premium {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.project-row-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--bg-darker);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--surface-border);
+}
+
+.project-row-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(0.8);
+  transition: all var(--transition-slow);
+}
+
+.project-row-premium:hover .project-row-image img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.05);
+}
+
+.project-placeholder-minimal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 5rem;
+  color: var(--surface-border);
+}
+
+.project-row-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-row-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.project-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.project-tech-minimal {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.project-row-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.project-row-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 90%;
+  margin-bottom: 2rem;
+}
+
+.project-row-actions {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.row-link {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid var(--surface-border);
+  padding-bottom: 4px;
+  transition: all var(--transition-fast);
+}
+
+.row-link:hover {
+  border-color: var(--text-main);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .projects-header-block { position: static; margin-bottom: 4rem; }
+  .project-row-title { font-size: 2.5rem; }
+  .project-list-premium { gap: 6rem; }
+}
