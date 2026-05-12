@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Project.css';
 
-const API_URL = 'http://127.0.0.1:8000/api/projects/';
+const API_URL = 'https://portfolio-drf-react.onrender.com/api/projects/';
 
 function Projects() {
   const [projects, setProjects] = useState([]);
