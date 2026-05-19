@@ -4,9 +4,9 @@ import '../styles/Skills.css';
 
 const SKILL_CATEGORIES = [
   { id: '01', title: 'Languages', items: 'Python // JavaScript // HTML5 // CSS3' },
-  { id: '02', title: 'Frontend', items: 'React.js // Redux // TailwindCSS // Framer Motion' },
-  { id: '03', title: 'Backend', items: 'Django // REST Framework // FastAPI // Node.js' },
-  { id: '04', title: 'Architecture', items: 'PostgreSQL // Docker // Git // CI/CD' },
+  { id: '02', title: 'Frontend', items: 'React.js // Redux // TailwindCSS ' },
+  { id: '03', title: 'Backend', items: 'Django // REST Framework ' },
+  { id: '04', title: 'Architecture', items: 'PostgreSQL  // Git // AWS' },
 ];
 
 function Skills() {
