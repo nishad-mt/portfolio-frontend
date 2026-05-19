@@ -1,12 +1,54 @@
 .about-section {
   background-color: var(--bg-darker);
+  background-image: 
+    radial-gradient(circle at 80% 50%, rgba(138, 43, 226, 0.08) 0%, rgba(10, 10, 10, 0.95) 80%),
+    linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.95)), 
+    url('../assets/profile.PNG');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Parallax effect */
   border-top: 1px solid var(--surface-border);
   border-bottom: 1px solid var(--surface-border);
+  position: relative;
+  overflow: hidden;
 }
 
 .about-header {
   position: sticky;
-  top: 150px;
+  top: 80px;
+}
+
+.about-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 240px;
+  margin-top: 1.5rem;
+  transition: all var(--transition-slow);
+}
+
+.about-profile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: drop-shadow(0 0 6px rgba(10, 10, 10, 0.8)) grayscale(20%) brightness(1.2);
+  transition: all var(--transition-slow);
+  /* Apply anti-gravity to the transparent portrait! */
+  animation: float-zero-g 6s ease-in-out infinite;
+}
+
+.about-image-glow {
+  display: none; /* No longer needed, using drop-shadow */
+}
+
+.about-image-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.about-image-wrapper:hover .about-profile-image {
+  filter: drop-shadow(0 0 25px var(--vibranium-glow)) grayscale(0%) brightness(1.1) scale(1.03);
+  animation-play-state: paused;
 }
 
 .about-para {

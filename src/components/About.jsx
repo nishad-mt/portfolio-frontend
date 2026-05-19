@@ -26,6 +26,8 @@ function About() {
               The balance of <br />
               <span className="text-italic text-muted">Utility & Art</span>
             </motion.h2>
+
+           
           </div>
 
           <div className="about-content">

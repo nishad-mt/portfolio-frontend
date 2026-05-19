@@ -150,6 +150,53 @@ const PROJECTS = [
         </div>
       </div>
     )
+  },
+  {
+    id: 4,
+    title: "Catalyst Tech Hub",
+    description: "A highly polished, premium marketing and enrollment platform for Catalyst Tech Hub—a leading technology institution. Built with modern, editorial-style layouts, campus navigation dropdowns, success stories feeds, and an interactive callback modal lead system.",
+    github_link: "https://github.com/nishad-mt/Catalyst_Skill_hub",
+    live_link: null,
+    tech_stack: ["React", "Vite", "Framer Motion", "Vanilla CSS", "UI/UX Design"],
+    renderMockup: () => (
+      <div className="premium-mockup-wrapper catalyst-hub-bg">
+        <div className="glass-card-mockup catalyst-card">
+          <div className="card-top-bar">
+            <span className="card-dot red"></span>
+            <span className="card-dot yellow"></span>
+            <span className="card-dot green"></span>
+            <span className="card-path">catalyst.tech/hub</span>
+          </div>
+          <div className="catalyst-content-mock">
+            <div className="catalyst-navbar-mock">
+              <span className="catalyst-logo-mock">CATALYST</span>
+              <div className="catalyst-navlinks-mock">
+                <span>Courses</span>
+                <span>Success Stories</span>
+                <span>About</span>
+              </div>
+              <span className="catalyst-cta-mock">Enroll</span>
+            </div>
+            
+            <div className="catalyst-hero-mock">
+              <div className="hero-text-block-mock">
+                <div className="mock-badge-glow">NO.1 SKILL INITIATIVE</div>
+                <div className="hero-title-mock">Transforming <br /><span className="text-highlight-mock">Digital Minds</span></div>
+              </div>
+              
+              <div className="enroll-modal-mock">
+                <div className="modal-title-mock">Request Callback</div>
+                <div className="modal-form-mock">
+                  <div className="mock-input-field"></div>
+                  <div className="mock-input-field"></div>
+                  <div className="mock-submit-btn-glow">SUBMIT</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
   }
 ];
 

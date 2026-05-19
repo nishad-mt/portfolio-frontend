@@ -381,3 +381,145 @@
   .project-list-premium { gap: 6rem; }
   .glass-card-mockup { width: 95%; height: 85%; }
 }
+
+/* Catalyst Tech Hub mockup styles */
+.catalyst-hub-bg {
+  background: radial-gradient(circle at 10% 90%, rgba(245, 158, 11, 0.12) 0%, rgba(139, 92, 246, 0.08) 50%, rgba(5, 5, 5, 0.95) 100%);
+}
+
+.catalyst-content-mock {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: #060508;
+}
+
+.catalyst-navbar-mock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.catalyst-logo-mock {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #f59e0b;
+  letter-spacing: 0.1em;
+}
+
+.catalyst-navlinks-mock {
+  display: flex;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.45rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.catalyst-cta-mock {
+  font-family: var(--font-display);
+  font-size: 0.45rem;
+  background: #f59e0b;
+  color: #000;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.catalyst-hero-mock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  flex-grow: 1;
+  gap: 12px;
+  position: relative;
+}
+
+.hero-text-block-mock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 50%;
+}
+
+.mock-badge-glow {
+  font-family: var(--font-mono);
+  font-size: 0.4rem;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: #f59e0b;
+  border-radius: 10px;
+  padding: 2px 6px;
+  letter-spacing: 0.05em;
+}
+
+.hero-title-mock {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  line-height: 1.1;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.text-highlight-mock {
+  color: #f59e0b;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.enroll-modal-mock {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 8px;
+  padding: 10px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.modal-title-mock {
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 4px;
+}
+
+.modal-form-mock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mock-input-field {
+  height: 8px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mock-submit-btn-glow {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(45deg, #f59e0b, #d97706);
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 0.45rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
