@@ -8,7 +8,7 @@ const timeline = [
     type: 'EXPERIENCE',
     period: '2026',
     title: 'Python Developer Intern',
-    org: 'Catalyst skill - hub',
+    org: 'Makbig - Calicut',
     desc: 'Developing high-performance backend microservices and collaborating on enterprise-scale architectures.'
   },
   {
@@ -20,12 +20,12 @@ const timeline = [
     desc: 'Specialized in Algorithms, Data Structures, and Software Engineering principles.'
   },
   {
-    id: 'selflearn',
-    type: 'INDEPENDENT',
+    id: 'catalyst',
+    type: 'EXPERIENCE',
     period: 'ONGOING',
-    title: 'Self-taught Full Stack',
-    org: 'Global',
-    desc: 'Mastering advanced system design, cloud orchestration, and cinematic frontend development.'
+    title: 'Web developer Intern',
+    org: 'Catalyst Tech Hub',
+    desc: 'A part of Catalyst Tech hub marketing team , and creating applications based on their requirements'
   },
 ];
 
