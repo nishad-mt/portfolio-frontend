@@ -37,7 +37,8 @@ function Contact() {
       setSent(true);
     } catch (err) {
       console.error('EmailJS error:', err);
-      setError('Failed to send. Please email me directly at nishadmt.py@gmail.com');
+      const msg = err?.text || err?.message || JSON.stringify(err);
+      setError(`EmailJS error: ${msg}`);
     } finally {
       setLoading(false);
     }
