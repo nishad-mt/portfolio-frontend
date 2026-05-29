@@ -1,15 +1,8 @@
 .about-section {
   background-color: var(--bg-darker);
-  background-image:
-    linear-gradient(
-      rgba(5,5,5,0.75),
-      rgba(5,5,5,0.85)
-    ),
-    radial-gradient(
-      circle at 80% 50%,
-      rgba(138,43,226,0.15) 0%,
-      rgba(10,10,10,0.92) 70%
-    ),
+  background-image: 
+    radial-gradient(circle at 80% 50%, rgba(138, 43, 226, 0.08) 0%, rgba(10, 10, 10, 0.95) 80%),
+    linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.95)), 
     url('../assets/profile.PNG');
   background-size: cover;
   background-position: center 30%;
@@ -39,11 +32,7 @@
   height: auto;
   display: block;
   object-fit: cover;
-  filter:
-  drop-shadow(0 0 18px rgba(138,43,226,0.35))
-  contrast(1.15)
-  brightness(1.15)
-  saturate(1.1);
+  filter: drop-shadow(0 0 6px rgba(10, 10, 10, 0.8)) grayscale(20%) brightness(1.2);
   transition: all var(--transition-slow);
   /* Apply anti-gravity to the transparent portrait! */
   animation: float-zero-g 6s ease-in-out infinite;
