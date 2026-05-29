@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
 
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || 'service_7z74g6k';
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_dq0wimg';
+const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || '3BmDLRn2iJfYky4Wr';
 
 const SOCIAL_LINKS = [
   { label: 'EMAIL',     value: 'nishadmt.py@gmail.com',        href: 'mailto:nishadmt.py@gmail.com' },
@@ -37,8 +37,7 @@ function Contact() {
       setSent(true);
     } catch (err) {
       console.error('EmailJS error:', err);
-      const msg = err?.text || err?.message || JSON.stringify(err);
-      setError(`EmailJS error: ${msg}`);
+      setError('Failed to send. Please email me directly at nishadmt.py@gmail.com');
     } finally {
       setLoading(false);
     }
