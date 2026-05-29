@@ -32,7 +32,7 @@ function Contact() {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         formRef.current,
-        { publicKey: EMAILJS_PUBLIC_KEY }
+        EMAILJS_PUBLIC_KEY
       );
       setSent(true);
     } catch (err) {
