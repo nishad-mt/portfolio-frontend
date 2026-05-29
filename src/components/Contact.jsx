@@ -1,36 +1,43 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
 
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 const SOCIAL_LINKS = [
-  { label: 'EMAIL', value: 'nishadmt.py@gmail.com', href: 'mailto:nishadmt.py@gmail.com' },
-  { label: 'GITHUB', value: 'github.com/nishad-mt', href: 'https://github.com/nishad-mt' },
-  { label: 'LINKEDIN', value: 'linkedin.com/in/nishad-mt', href: 'https://www.linkedin.com/in/nishad-mt/' },
-  { label: 'INSTAGRAM', value: '@mt_nishad_', href: 'https://www.instagram.com/mt_nishad_/' },
+  { label: 'EMAIL',     value: 'nishadmt.py@gmail.com',        href: 'mailto:nishadmt.py@gmail.com' },
+  { label: 'GITHUB',    value: 'github.com/nishad-mt',         href: 'https://github.com/nishad-mt' },
+  { label: 'LINKEDIN',  value: 'linkedin.com/in/nishad-mt',    href: 'https://www.linkedin.com/in/nishad-mt/' },
+  { label: 'INSTAGRAM', value: '@mt_nishad_',                  href: 'https://www.instagram.com/mt_nishad_/' },
 ];
 
 function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const formRef = useRef(null);
+  const [name, setName]       = useState('');
+  const [email, setEmail]     = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(false);
-  const [error, setError] = useState(null);
+  const [sent, setSent]       = useState(false);
+  const [error, setError]     = useState(null);
 
   async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("https://portfolio-drf-react.onrender.com/api/contact/", {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message }),
-      });
-      if (!res.ok) throw new Error();
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      );
       setSent(true);
-    } catch {
-      setError('Connection issue. Please use direct email.');
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      setError('Failed to send. Please email me directly at nishadmt.py@gmail.com');
     } finally {
       setLoading(false);
     }
@@ -82,18 +89,18 @@ function Contact() {
                 <p>I'll respond within 24 hours.</p>
               </motion.div>
             ) : (
-              <form className="contact-form-premium" onSubmit={handleSubmit}>
+              <form ref={formRef} className="contact-form-premium" onSubmit={handleSubmit}>
                 <div className="input-group">
                   <label>NAME</label>
-                  <input type="text" value={name} onChange={(e) => setName(e.target.value)} required placeholder="Nishad M T" />
+                  <input type="text" name="from_name" value={name} onChange={(e) => setName(e.target.value)} required placeholder="Your name" />
                 </div>
                 <div className="input-group">
                   <label>EMAIL</label>
-                  <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="hello@example.com" />
+                  <input type="email" name="from_email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="hello@example.com" />
                 </div>
                 <div className="input-group">
                   <label>MESSAGE</label>
-                  <textarea rows="5" value={message} onChange={(e) => setMessage(e.target.value)} required placeholder="Tell me about your project..." />
+                  <textarea rows="5" name="message" value={message} onChange={(e) => setMessage(e.target.value)} required placeholder="Tell me about your project..." />
                 </div>
 
                 {error && <p className="form-error-text">{error}</p>}
