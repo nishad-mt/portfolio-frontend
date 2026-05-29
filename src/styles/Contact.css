@@ -57,6 +57,11 @@
   gap: 1rem;
 }
 
+.input-group input,
+.input-group textarea {
+  text-transform: none !important;
+}
+
 .input-group label {
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -71,7 +76,7 @@
   border-bottom: 1px solid var(--surface-border);
   padding: 1rem 0;
   color: var(--text-main);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1.25rem;
   outline: none;
   transition: border-color var(--transition-fast);
