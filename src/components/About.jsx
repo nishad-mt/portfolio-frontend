@@ -61,7 +61,7 @@ function About() {
               </div>
               <div className="about-stat">
                 <span className="stat-label">Focus</span>
-                <span className="stat-value">Python / React / AI</span>
+                <span className="stat-value">Python / Django </span>
               </div>
               <div className="about-stat">
                 <span className="stat-label">Base</span>
