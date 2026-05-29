@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import '../styles/Contact.css';
 
 const SOCIAL_LINKS = [
-  { label: 'EMAIL', value: 'nishadpaul64@gmail.com', href: 'mailto:nishadpaul64@gmail.com' },
+  { label: 'EMAIL', value: 'nishadmt.py@gmail.com', href: 'mailto:nishadmt.py@gmail.com' },
   { label: 'GITHUB', value: 'github.com/nishad-mt', href: 'https://github.com/nishad-mt' },
   { label: 'LINKEDIN', value: 'linkedin.com/in/nishad-mt', href: 'https://www.linkedin.com/in/nishad-mt/' },
   { label: 'INSTAGRAM', value: '@mt_nishad_', href: 'https://www.instagram.com/mt_nishad_/' },
