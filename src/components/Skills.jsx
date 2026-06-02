@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 import '../styles/Skills.css';
 
 const SKILL_CATEGORIES = [
-  { id: '01', title: 'Languages', items: 'Python // JavaScript // HTML5 // CSS3' },
-  { id: '02', title: 'Frontend', items: 'React.js // TailwindCSS ' },
-  { id: '03', title: 'Backend', items: 'Django // REST Framework ' },
-  { id: '04', title: 'Architecture', items: 'PostgreSQL  // Git // AWS' },
+  { id: '01', title: 'Languages', items: 'Python // JavaScript // SQL // HTML5 // CSS3' },
+  { id: '02', title: 'Frontend', items: 'React.js // Tailwind CSS // Bootstrap' },
+  { id: '03', title: 'Backend', items: 'Django // REST Framework // Gunicorn // Nginx' },
+  { id: '04', title: 'Database', items: 'PostgreSQL // SQLite // Django ORM' },
+  { id: '05', title: 'Auth & Security', items: 'OAuth 2.0 // JWT // RBAC' },
+  { id: '06', title: 'Tools & Platforms', items: 'Git // GitHub // AWS // VS Code' },
 ];
 
 function Skills() {
